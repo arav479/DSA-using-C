@@ -24,7 +24,6 @@ void delete_element(int *array,int *list_length) {
 	int element_index=-1;
 	printf("enter element to delete-");
 	scanf("%d",&element);
-
 	for(int i=0;i<*list_length;i++){
 		if (*array==element){
 			element_index=i;
@@ -36,14 +35,11 @@ void delete_element(int *array,int *list_length) {
 		array[i]=array[i+1];
 	}
 	*list_length-=1;
-
 if (element_index==-1) {
 	printf("element not found!");
 	return;
 }
 }
-
-
 ////////////////////////////////////////////////////////////////////////
 void find(int *array,int *list_length,int array_length){
 	int *start=array;
@@ -125,7 +121,6 @@ void display(int *array,int *list_length,int array_length){
 			printf("|%d",array[i]);
 		}
 	}
-
 }
 ///////////////////////////////////////////////////////////////////////////
 int main() {
@@ -136,9 +131,7 @@ int main() {
    int list_length=0;
    int choice;
    while (1){
-
    printf("\n---OPERATIONS---\n");
-
    printf("1.add\n2.delete\n3.insert\n4.find\n5.find kth\n6.create\n7.display\n8.exit\n");
    printf("enter the choice-->");
    scanf("%d",&choice);
@@ -154,9 +147,6 @@ int main() {
 	case 8:return 0;
 	default:printf("enter the valid choice!!!\n\n");break;
    }
-
-
-
 }
 }
 

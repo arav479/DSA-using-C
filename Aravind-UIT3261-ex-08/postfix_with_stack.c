@@ -23,7 +23,7 @@ void pop(struct node **head) {
 int peek(struct node **head) {
     if(*head==NULL) {
         printf("Stack is empty");
-        return 0;
+        return;
     }
     struct node *temp=*head;
     return temp->data;
@@ -88,7 +88,7 @@ int main() {
     int newdata;
     while (1) {
         printf("\n\n--- STACK MENU ---");
-        printf("\n1. Push\n2. Pop\n3. Display\n4. peek\n 5. exit");
+        printf("\n1. Push\n2. Pop\n3. Display\n4. Exit");
         printf("\nEnter your choice: ");
         scanf("%d", &choice);
         switch (choice) {
@@ -104,12 +104,7 @@ int main() {
                 display(&head);
                 break;
             case 4:
-                int top;
-                top=peek(&head);
-                printf("top element->%d", top);
-                break;
-            case 5:
-                exit(0);
+                return 0;
             default:
                 printf("\nInvalid choice! Please try again.");
         }

@@ -15,7 +15,6 @@ void add_at_pos(struct node **list_ptr,int pos) {
       }
       newnode->next=temp->next;
       temp->next=newnode;
-
 }
 void add_at_beginning(struct node **list_ptr) {
       struct node *newnode;
@@ -98,8 +97,6 @@ int find_kth_element(struct node **list_ptr,int pos) {
             i++;
       }
       return temp->data;
-
-
 }
 void check_empty(struct node **list_ptr) {
       if (*list_ptr==NULL) {
@@ -121,7 +118,6 @@ void delete_list(struct node **list_ptr) {
             temp=(*list_ptr);
             (*list_ptr)=(*list_ptr)->next;
             free(temp);
-
       }
 }
 int main() {
