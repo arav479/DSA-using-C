@@ -5,11 +5,8 @@ struct node {
     int data;
     struct node *next;
 };
-
 struct node *front = NULL;
 struct node *rear = NULL;
-
-
 void enqueue() {
     struct node *newnode = (struct node*)malloc(sizeof(struct node));
     printf("Enter data: ");
